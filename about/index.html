@@ -58,10 +58,10 @@ In the particular model we present in this site, we further split the susceptibl
 <p>
   \[
   \begin{align*}
-  \frac{d\,S_D}{d\,t}&=-\beta_{DD}\,S_D\,I_D-\beta_{DM}\,S_D\,I_M\\
-  \frac{d\,S_M}{d\,t}&=-\beta_{MD}\,S_M\,I_D-\beta_{MM}\,S_M\,I_M\\
-  \frac{d\,E_D}{d\,t}&=\beta_{DD}\,S_D\,I_D+\beta_{DM}\,S_D\,I_M - \gamma_D\,E_D\\
-  \frac{d\,E_M}{d\,t}&=\beta_{MD}\,S_M\,I_D+\beta_{MM}\,S_M\,I_M - \gamma_M\,E_M\\
+  \frac{d\,S_D}{d\,t}&=-\frac{\beta_{DD}}{N}\,S_D\,I_D-\frac{\beta_{DM}}{N}\,S_D\,I_M\\
+  \frac{d\,S_M}{d\,t}&=-\frac{\beta_{MD}}{N}\,S_M\,I_D-\frac{\beta_{MM}}{N}\,S_M\,I_M\\
+  \frac{d\,E_D}{d\,t}&=\frac{\beta_{DD}}{N}\,S_D\,I_D+\frac{\beta_{DM}}{N}\,S_D\,I_M - \gamma_D\,E_D\\
+  \frac{d\,E_M}{d\,t}&=\frac{\beta_{MD}}{N}\,S_M\,I_D+\frac{\beta_{MM}}{N}\,S_M\,I_M - \gamma_M\,E_M\\
   \frac{d\,I_D}{d\,t}&=\gamma_D\,E_D-(\alpha_D+\delta_D)\,I_D\\
   \frac{d\,I_M}{d\,t}&=\gamma_M\,E_M-(\alpha_M+\delta_M)\,I_M\\
   \frac{d\,R}{d\,t}&=\alpha_M\,I_M+\alpha_D\,I_D\\
@@ -69,7 +69,7 @@ In the particular model we present in this site, we further split the susceptibl
   \end{align*}\]
 </p>
 <p>
-The parameter values for these equations are determined from the raw data courtesy of <a href="https://github.com/CSSEGISandData/COVID-19" title="Johns Hopkins CSSE">the Center for Systems Science and Engineering at Johns Hopkins University</a>. To assist in the fitting we make some simplifying assumptions, first we assume that \(\gamma_D=\gamma_M\), \(\delta_D=\delta_M\), and \(\alpha_D=\alpha_M\). This corresponds to assuming that the time one spends infected and the latency period of the disease are the same in both distancers and mixers. While we might expect slight variations in these numbers, we do not expect this assumption to be too simplistic. Further, we assume that $\beta_{DM}=\beta_{MD}$ suggesting that the transmissivity of the disease across compartments is the same. Finally, we assume that \(\beta_{MM}=100\,\beta_{DD}\) and \(\beta_{MM}=20\,\beta_{DM}\). This suggests that Mixer-Mixer interactions are 100 times more likely than Distancer-Distancer interactions and 20 times more likely than Distancer-Mixer interactions.
+The parameter values for these equations are determined from the raw data courtesy of <a href="https://github.com/CSSEGISandData/COVID-19" title="Johns Hopkins CSSE">the Center for Systems Science and Engineering at Johns Hopkins University</a>. To assist in the fitting we make some simplifying assumptions, first we assume that \(\gamma_D=\gamma_M\), \(\delta_D=\delta_M\), and \(\alpha_D=\alpha_M\). This corresponds to assuming that the time one spends infected and the latency period of the disease are the same in both distancers and mixers. While we might expect slight variations in these numbers, we do not expect this assumption to be too simplistic. Further, we assume that \(\beta_{DM}=\beta_{MD}\) suggesting that the transmissivity of the disease across compartments is the same. Finally, we assume that \(\beta_{MM}=100\,\beta_{DD}\) and \(\beta_{MM}=20\,\beta_{DM}\). This suggests that Mixer-Mixer interactions are 100 times more likely than Distancer-Distancer interactions and 20 times more likely than Distancer-Mixer interactions.
 </p>
             <hr>
           </div>
