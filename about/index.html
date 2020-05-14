@@ -2,8 +2,12 @@
 <html lang="en">
   <head>
       <meta charset="utf-8">
-      <link rel="stylesheet" type="text/css" href="/template.css">
+      <link rel="stylesheet" type="text/css" href="../template.css">
       <title>COVID19 Forecasting in Canada</title>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+      </script>
   </head>
   <body>
         <header>
@@ -37,16 +41,21 @@
         <div id="content">
           <div id="content-inner">
             <h2>About</h2>
+<p>Welcome to the Canadian COVID-19 Forecasts web app. Provincial level mathematical modelling of the COVID-19 pandemic is performed here with options for the user to analyze different social distancing strategies.</p>
+
+<p>The people behind this website are researchers in the <a href="https://uwaterloo.ca/applied-mathematics/" title="University of Waterloo Applied Mathematics">University of Waterloo’s department of Applied Mathematics</a>. </p>
+
+<h3>Methodology</h3>
 <p>
-  What do we want here? Here are some ideas (no particular order, anyone who wants to start writing copy for this, go ahead!)
+Mathematical models used to describe epidemics are often described by mathematical equations that operate on different compartments of people. We assume the population is split into the following larger compartments: susceptible, exposed, infected, recovered, and deceased. In the susceptible compartment are individuals who have never had the SARS-CoV-2 virus, the individuals in the exposed compartment are those who have come in contact with the virus and will eventually become symptomatic, but have not yet. The infected compartments is made up of people who have the virus and are symptomatic and contagious. The recovered compartment represents those who have had the virus and so have immunity whereas the deceased compartment represents those individuals whose COVID-19 cases were fatal.
 </p>
-<ul>
-  <li>Link to the pre-print?</li>
-  <li>Maybe a summary of the methodology</li>
-  <li>Maybe contact info/emails for us?</li>
-  <li>Maybe a bit on model assumptions/limitations?</li>
-</ul>
-<p>If anyone wants to edit this content, download <a href="/content/about_content.html">this file</a> (right click and hit 'Save-Link-As' or similar) and write whatever you want. You can include any HTML tags you want. If you need any help with HTML tags, just email me (Brydon). When you're done, just email me the edited file and I can include it on the site. </p>
+<div style="text-align:center">
+<img width=800 src="DistancingSEIRD.png" title="Distancing SEIRD" alt="Distancing Seird">
+</div>
+<p>
+In the particular model we present in this site, we further split the susceptible, exposed, and infected compartments again into social distancing and social mixing sub-compartments. 
+</p>
+
 
             <hr>
           </div>
